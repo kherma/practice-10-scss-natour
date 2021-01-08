@@ -1,0 +1,54 @@
+.btn {
+  &:link,
+  &:visited {
+    font-size: 1.6rem;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($dark, 0.3);
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($dark, 0.3);
+  }
+
+  &::after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    border-radius: 10rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &:hover::after {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+
+  &--white {
+    background-color: $light;
+    color: $grey;
+
+    &::after {
+      background: $light;
+    }
+  }
+
+  &--animated {
+    animation: moveFromBottom 2s ease-out 0.75s backwards;
+  }
+}
