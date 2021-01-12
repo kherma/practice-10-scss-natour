@@ -48,6 +48,15 @@
     }
   }
 
+  &--green {
+    background-color: $green-medium;
+    color: $light;
+
+    &::after {
+      background: $green-medium;
+    }
+  }
+
   &--animated {
     animation: moveFromBottom 2s ease-out 0.75s backwards;
   }
