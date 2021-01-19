@@ -5,3 +5,40 @@
     clear: both;
   }
 }
+
+// MEDIA QUERY MANAGER
+/*
+Phone:  0 - 600;      
+Tablet portraint:  601 - 900;   
+Tablet landscape:  901 - 1200;   
+{regular:  1201 - 1800; } 
+Big desktop:  1800 <;
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-des
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-des {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
