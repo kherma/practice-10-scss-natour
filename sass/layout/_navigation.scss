@@ -38,6 +38,11 @@
     box-shadow: 0 1rem 3rem rgba($dark, 0.2);
     text-align: center;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
   }
 
   &__button:hover &__icon::before {
@@ -59,6 +64,11 @@
     background-image: linear-gradient($green-light, $green-dark);
     z-index: 99997;
     transition: all 0.5s cubic-bezier(0.87, 0, 0.13, 1);
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
   }
 
   &__nav {
